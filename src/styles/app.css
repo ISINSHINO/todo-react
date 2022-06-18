@@ -1,0 +1,452 @@
+body {
+    margin:0;
+}
+.header {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+}
+.inner-header {
+    height:65vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:35vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+}
+
+.content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% {
+        transform: translate3d(85px,0,0);
+    }
+}
+
+
+.div-center {
+    border-radius: 30px;
+    width: 400px;
+    min-height: 340px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 10%;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1em 2em;
+    border-bottom: 2px solid #ccc;
+    display: table;
+}
+
+div.content-form {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.content-form h2{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    color: #202020;
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.content-form p {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #202020;
+    text-align: center;
+    margin: 0;
+    padding-top: 25px;
+}
+
+.PrivateSwitchBase-input {
+    margin: 0 !important;
+}
+
+.content-form input {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #202020;
+    padding-left: 20px;
+    width: 390px;
+    height: 50px;
+    background: #f8f8f8;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    outline: none;
+    margin: 35px 0 0;
+}
+
+.content-form input:focus {
+    background: white;
+    border: 1px solid #D9D9D9;
+    outline: none;
+    font-style: normal;
+    content: "";
+}
+
+.content-form input::placeholder {
+    font-family: Roboto, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #999999;
+}
+
+.content-form input:focus::placeholder {
+    color: transparent;
+}
+
+.content-form button {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    border: none;
+    width: 410px;
+    height: 50px;
+    background: #0075ff;
+    border-radius: 15px;
+    margin: 35px 0 0;
+    transition: 0.5s;
+}
+
+.content-form button:hover{
+    background: #1259B8;
+    transition: 0.5s;
+}
+
+.btn-after {
+    width: 20px;
+    position: absolute;
+    bottom: 25.5%;
+    right: 12%;
+}
+
+/*/////////////////////////////*/
+
+.search-radio {
+    display: flex;
+    margin-top: 10px;
+}
+
+.content-form .task-input {
+    width: 350px;
+    margin-top: 20px;
+}
+
+.add-img {
+    padding-top: 3px;
+    height: 20px;
+}
+
+.content-form .add-btn {
+    width: 60px;
+    margin-top: 20px;
+}
+
+.task-input-box {
+    gap: 10px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    justify-content: space-between;
+    padding-right: 5px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.expanded-task {
+    border-bottom: 0;
+}
+
+.task input {
+    width: 18px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer ;
+}
+
+.task p {
+    padding-top: 0;
+}
+
+.task .delete,
+.task .edit{
+    height: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.task .delete:hover,
+.task .edit:hover {
+    transition: 0.5s;
+    transform: scale(1.3);
+}
+
+.task .exp{
+    width: 21px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.task .exp:hover{
+    transition: 0.5s;
+    transform: scale(1.3);
+}
+
+.expanded-button {
+    width: 21px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: rotateX(180deg);
+}
+
+.expanded-button:hover {
+    transition: 0.5s;
+    transform: scale(1.3) rotateX(180deg);
+}
+
+.checkbox-name,
+.edit-delete{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-radio .search-input {
+/*style={{width: 80, height: 25, margin: 5, marginLeft:0}}*/
+    width: 80px;
+    height: 25px;
+    margin: 5px 5px 5px 0;
+}
+
+.search-radio .search-input::placeholder {
+    padding-left: 0px;
+}
+
+.Mui-selected {
+    background-color: #0075ff !important;
+}
+
+.content-form .task-page-btn {
+    width: auto;
+}
+
+.btn-container {
+    gap: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.task-description {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #202020;
+    padding-left: 20px;
+    width: 95%;
+    height: 50px;
+    background: #f8f8f8;
+    border-radius: 0 0 15px 15px;
+
+}
+
+.task-description p {
+    text-align: left;
+    padding-top: 15px;
+}
+
+.description-hidden {
+    display: none;
+}
+
+.toast-container {
+    position: absolute;
+    width: 100%;
+    bottom: -150px;
+}
+
+.toast {
+    width: 20%;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 15px !important;
+}
+
+h1 {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 100px;
+        min-height:40px;
+    }
+    .content {
+        height:30vh;
+    }
+}
+
+/* 2532x1170 pixels at 460ppi */
+@media screen
+and (device-width: 390px)
+and (device-height: 844px)
+and (-webkit-device-pixel-ratio: 3) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+    body {
+        position: relative
+    }
+
+    .inner-header {
+        height: 80vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .div-center {
+        width: 100px;
+        min-height: 230px;
+        margin-left: 14px;
+        margin-right: 5px;
+    }
+
+    .content-form {
+        width: 300px;
+    }
+
+    .content-form h2{
+        font-size: 24px;
+    }
+
+    .content-form input {
+        height: 35px;
+    }
+
+    .task-input-box .add-btn {
+        height: 35px;
+        margin-bottom: 0;
+    }
+
+    .search-radio {
+        flex-direction: column;
+    }
+
+    .search-radio .search-input {
+        /*style={{width: 80, height: 25, margin: 5, marginLeft:0}}*/
+        width: 170px;
+        height: 25px;
+        margin: 5px 5px 5px 0;
+    }
+
+    .MuiFormControl-root .MuiFormGroup-row {
+        justify-content: space-between;
+    }
+
+    .task {
+        margin-top: 10px;
+    }
+
+    .content-form .name-input{
+        width: 280px;
+    }
+
+    .content-form button {
+        width: 310px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        height: 40px;
+    }
+
+    .btn-after {
+        bottom: 12.5%;
+        width: 15px;
+    }
+
+    .toast-container {
+        position: absolute;
+        width: 100%;
+        bottom: 5px;
+    }
+
+    .toast {
+        width: 73%;
+        margin: 5px auto auto;
+        border-radius: 10px !important;
+    }
+}
